@@ -21,7 +21,6 @@
 | `/team` | Устав команды, роли, протоколы встреч |
 
 ## Ссылки
-- Презентация этапа 2: https://claude.ai/artifact/LNCsFBCJzikpfewRTWayDU
 - Доска задач (Trello): [добавьте ссылку]
 - Google Drive: [добавьте ссылку]
 

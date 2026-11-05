@@ -21,9 +21,8 @@
 | `/team` | Устав команды, роли, протоколы встреч |
 
 ## Ссылки
-- Презентация этапа 2: https://claude.ai/artifact/LNCsFBCJzikpfewRTWayDU
-- Доска задач (Trello): [добавьте ссылку]
-- Google Drive: [добавьте ссылку]
+- Доска задач (Trello): https://trello.com/invite/b/6ad3446d567f407f10e09342/ATTI9d857b923815f2ae9b32408c8fe8d6b898D37E0C/🚀-edutrack-доска-разработки-веб-сервиса
+- Google Drive: https://drive.google.com/drive/folders/1BRzMNHvPz1VD4yh6P7OkeHzw1hH4zuC2?usp=sharing
 
 ## Правила работы
 - Ветки: `main` — сдаваемая версия, остальное через ветки и pull request.

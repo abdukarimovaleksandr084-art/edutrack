@@ -1,0 +1,68 @@
+Table users {
+  id int [pk]
+  role varchar
+  full_name varchar
+  email varchar [unique]
+  telegram_chat_id varchar
+}
+
+Table subjects {
+  id int [pk]
+  title varchar
+  teacher_id int [ref: > users.id]
+}
+
+Table enrollments {
+  id int [pk]
+  student_id int [ref: > users.id]
+  subject_id int [ref: > subjects.id]
+}
+
+Table grades {
+  id int [pk]
+  enrollment_id int [ref: > enrollments.id]
+  score decimal
+  imported_at datetime
+}
+
+Table deadlines {
+  id int [pk]
+  subject_id int [ref: > subjects.id]
+  title varchar
+  due_at datetime
+}
+
+Table mentor_slots {
+  id int [pk]
+  mentor_id int [ref: > users.id]
+  starts_at datetime
+  capacity int
+  meet_url varchar
+}
+
+Table bookings {
+  id int [pk]
+  slot_id int [ref: > mentor_slots.id]
+  student_id int [ref: > users.id]
+  status varchar
+  created_at datetime
+  indexes {
+    (slot_id, student_id) [unique]
+  }
+}
+
+Table messages {
+  id int [pk]
+  from_id int [ref: > users.id]
+  to_id int [ref: > users.id]
+  body text
+  sent_at datetime
+}
+
+Table notifications {
+  id int [pk]
+  user_id int [ref: > users.id]
+  deadline_id int [ref: > deadlines.id, null]
+  booking_id int [ref: > bookings.id, null]
+  sent_at datetime
+}
